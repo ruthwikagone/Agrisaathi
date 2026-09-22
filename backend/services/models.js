@@ -16,7 +16,7 @@ const diseaseScript = path.join(root, 'ml', 'inference', 'disease_predict.py');
 const diseaseArtifact = path.join(root, 'ml', 'models', 'disease_model.keras');
 const diseaseMetadata = path.join(root, 'ml', 'models', 'disease_model_metadata.json');
 
-const DISEASE_AI_URL = 'http://127.0.0.1:5001';
+const DISEASE_AI_URL = 'http://agrisaathi-disease-ai.onrender.com';
 
 const VALID_CROPS = new Set([
   'rice',
