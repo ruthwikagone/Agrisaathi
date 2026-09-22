@@ -1,7 +1,7 @@
-# Reproducible local dependencies for the currently implemented ML utilities.
-# TensorFlow is deliberately not included: the disease model training/inference
-# pipeline has not been implemented or validated yet.
 pandas>=2.2,<3
 scikit-learn>=1.5,<2
 joblib>=1.4,<2
 Pillow>=10.4,<12
+Flask>=3.0,<4
+numpy>=1.26,<3
+tensorflow-cpu==2.18.0
