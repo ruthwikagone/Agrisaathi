@@ -149,14 +149,26 @@ def predict():
             "ok": False,
             "error": str(e)
         }), 500
+def load_models_background():
+    try:
+        print("Starting background model loading...")
+        load_models()
+        print("All disease models loaded successfully.")
+    except Exception as e:
+        print(f"Model loading failed: {e}")
+
 
 if __name__ == "__main__":
-
     print("Starting AgriSaathi Disease AI...")
 
-    load_models()
-
     port = int(os.environ.get("PORT", 5001))
+
+    threading.Thread(
+        target=load_models_background,
+        daemon=True
+    ).start()
+
+    print(f"Starting Flask server on port {port}...")
 
     app.run(
         host="0.0.0.0",
