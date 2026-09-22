@@ -68,3 +68,5 @@ Thumbs.db
 # Large plant disease image datasets
 ml/plantdoc/
 ml/five_crop_diseases/
+
+frontend/*.backup
