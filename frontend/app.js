@@ -1,7 +1,7 @@
 ﻿(() => {
   'use strict';
 
-  const API_ROOT = 'http://127.0.0.1:3000/api';
+  const API_ROOT = '/api';
   const LOCALES = { en: 'en-IN', te: 'te-IN', hi: 'hi-IN' };
   const SPEECH_LOCALES = { en: 'en-IN', te: 'te-IN', hi: 'hi-IN' };
   const RAIN_SIREN_STORAGE_KEY = 'agrisaathi-rain-siren-enabled';
