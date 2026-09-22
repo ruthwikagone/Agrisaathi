@@ -1,22 +1,24 @@
-# Raw datasets and trained artifacts that are deliberately not versioned
+# Raw datasets
 datasets/crop/raw/
 datasets/crop/processed/
 datasets/plantvillage/source/
 datasets/plantvillage/processed/
 
+# Crop models
 models/crop/*.joblib
 models/crop/*.json
-models/plant_disease/*.keras
-models/plant_disease/*.json
 
+# Reports
 reports/crop/*.json
 reports/plant_disease/*.json
 
-# Large plant disease datasets
+# Large datasets
 five_crop_diseases/
 plantdoc/
 
-# Keep directory layout in git without committing data
+# Keep directory placeholders
 !datasets/**/.gitkeep
 !models/**/.gitkeep
 !reports/**/.gitkeep
+
+# Plant disease models are intentionally NOT ignored
