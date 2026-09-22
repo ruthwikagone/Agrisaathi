@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#1f5b42" />
+    <meta name="description" content="AgriSaathi — multilingual farm decision support" />
+    <title>AgriSaathi</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content" data-i18n="skipToContent">Skip to main content</a>
+
+    <div class="app-shell" id="app-shell">
+      <header class="topbar">
+        <button
+          class="icon-button menu-button"
+          id="menu-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-controls="sidebar"
+          aria-expanded="false"
+          data-i18n-aria-label="openNavigation"
+        >
+          <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+        </button>
+        <a class="brand" href="#dashboard" aria-label="AgriSaathi home" data-i18n-aria-label="home">
+          <svg class="brand-mark" viewBox="0 0 56 56" aria-hidden="true">
+            <path d="M28 49V20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3.2"/>
+            <path d="M28 29C18 28 12 21 12 11c10 0 16 7 16 18Z" fill="currentColor" opacity=".92"/>
+            <path d="M28 38c9-1 16-8 16-18-10 0-16 7-16 18Z" fill="currentColor" opacity=".62"/>
+            <path d="M8 49h40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3.2"/>
+          </svg>
+          <span>Agri<span>Saathi</span></span>
+        </a>
+        <div class="topbar-actions">
+          <div class="connection-indicator" id="connection-indicator" role="status" aria-live="polite">
+            <span class="connection-dot" aria-hidden="true"></span>
+            <span id="connection-label" data-i18n="checkingSystem">Checking system</span>
+          </div>
+          <label class="language-select">
+            <span class="sr-only" data-i18n="language">Language</span>
+            <select id="language-switcher" aria-label="Language" data-i18n-aria-label="language">
+              <option value="en">English</option>
+              <option value="te">తెలుగు</option>
+              <option value="hi">हिन्दी</option>
+            </select>
+          </label>
+        </div>
+      </header>
+
+      <div class="drawer-scrim" id="drawer-scrim" hidden></div>
+      <aside class="sidebar" id="sidebar" aria-label="Primary navigation" data-i18n-aria-label="primaryNavigation">
+        <div class="farm-summary" id="farm-summary">
+          <div class="farm-avatar" aria-hidden="true">🌾</div>
+          <div>
+            <p class="eyebrow" data-i18n="yourFarm">Your farm</p>
+            <strong id="farm-summary-name" data-i18n="farmNotSet">Farm profile not set</strong>
+          </div>
+        </div>
+        <nav class="navigation" id="navigation"></nav>
+        <div class="sidebar-footer">
+          <button class="subtle-button" id="refresh-system" type="button">
+            <span aria-hidden="true">↻</span><span data-i18n="refreshSystem">Refresh system</span>
+          </button>
+          <p data-i18n="liveDataNotice">Information is shown only when supplied by connected services.</p>
+        </div>
+      </aside>
+
+      <main id="main-content" class="main-content" tabindex="-1">
+        <div id="app" aria-live="polite" aria-busy="true">
+          <div class="initial-loader">
+            <span class="spinner" aria-hidden="true"></span>
+            <p data-i18n="loadingWorkspace">Loading your farm workspace…</p>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+    <noscript>
+      <div class="noscript-message">AgriSaathi needs JavaScript enabled to communicate with its farm services.</div>
+    </noscript>
+    <script src="/app.js" defer></script>
+  </body>
+</html>
